@@ -1,0 +1,247 @@
+# Day 2 — Python Control Flow & Data Structures
+
+## 1. Conditional Statements
+
+Conditional statements allow a program to execute different blocks of code based on whether a condition is `True` or `False`.
+
+**Types:**
+- `if` — Executes code when a condition is true.
+- `elif` — Checks another condition if previous conditions were false.
+- `else` — Executes when none of the previous conditions are true.
+
+```python
+marks = 85
+
+if marks >= 90:
+    print("Grade A")
+elif marks >= 75:
+    print("Grade B")
+else:
+    print("Grade C")
+```
+
+**Important:** Python checks conditions from top to bottom and executes the first matching block.
+
+## 2. Loops
+
+Loops allow a program to execute a block of code repeatedly.
+
+**Types:**
+
+- `for` loop — Iterates over a sequence or iterable, such as a list, string, or range.
+- `while` loop — Repeats as long as a condition remains true.
+
+```python
+# for loop
+for number in range(1, 4):
+    print(number)
+
+# while loop
+count = 1
+while count <= 3:
+    print(count)
+    count += 1
+```
+
+**Useful:** Use `for` when iterating over a collection or known sequence. Use `while` when repetition depends on a condition.
+
+## 3. Loop Control Statements
+
+These statements change the normal execution of a loop.
+
+- `break` — Immediately exits the loop.
+- `continue` — Skips the current iteration and moves to the next one.
+- `pass` — Does nothing; acts as a placeholder when a statement is syntactically required.
+
+```python
+for number in range(1, 6):
+    if number == 3:
+        continue
+    if number == 5:
+        break
+    print(number)
+```
+
+## 4. Lists
+
+A list stores multiple values in an **ordered, mutable collection**.
+
+- Ordered: Elements maintain their position and can be accessed using indexes.
+- Mutable: Elements can be added, removed, or modified.
+- Allows duplicate values.
+- Supports different data types.
+
+```python
+skills = ["Java", "Python", "SQL"]
+skills[0] = "Spring Boot"
+skills.append("AWS")
+```
+
+**Important operations:**
+
+| Operation | Purpose |
+|---|---|
+| `append(value)` | Add an element at the end |
+| `insert(index, value)` | Add an element at a specific position |
+| `extend(iterable)` | Add multiple elements |
+| `remove(value)` | Remove the first matching value |
+| `pop(index)` | Remove and return an element by index; defaults to the last |
+| `len(list)` | Get the number of elements |
+| `sort()` | Sort the list in place |
+| `reverse()` | Reverse the list in place |
+
+**Indexing and slicing:**
+
+```python
+numbers = [10, 20, 30, 40, 50]
+
+numbers[0]     # 10
+numbers[-1]    # 50
+numbers[1:4]   # [20, 30, 40]
+```
+
+## 5. List Comprehension
+
+List comprehension provides a concise way to create a new list from an existing iterable.
+
+**Syntax:**
+
+```python
+[expression for item in iterable if condition]
+```
+
+- `expression` — Value to add to the new list.
+- `for item in iterable` — Iterates through the elements.
+- `if condition` — Optional filter condition.
+
+**Without a condition:**
+
+```python
+numbers = [1, 2, 3, 4]
+squares = [number ** 2 for number in numbers]
+```
+
+**With a condition:**
+
+```python
+even_numbers = [number for number in numbers if number % 2 == 0]
+```
+
+The `if` condition is optional. Without it, every element is processed.
+
+## 6. Tuples
+
+A tuple stores multiple values in an **ordered, immutable collection**.
+
+- Ordered: Elements can be accessed using indexes.
+- Immutable: Elements cannot be changed after creation.
+- Allows duplicate values.
+- Supports different data types.
+
+```python
+employee = ("Rahul", 28, "Developer")
+
+print(employee[0])
+```
+
+Unlike lists, tuple elements cannot be added, removed, or modified directly.
+
+**Use case:** Use tuples when a collection of values should remain unchanged.
+
+## 7. Dictionaries
+
+A dictionary stores data as **key-value pairs**.
+
+- Each key must be unique.
+- Values can be duplicated.
+- Mutable: Entries can be added, modified, or removed.
+- Maintains insertion order.
+- Keys must be hashable (commonly strings, numbers, or tuples of hashable values).
+
+```python
+employee = {
+    "name": "Rahul",
+    "age": 28,
+    "role": "Developer"
+}
+
+print(employee["name"])
+employee["salary"] = 60000
+employee["age"] = 29
+```
+
+**Important methods:**
+
+| Method | Purpose |
+|---|---|
+| `keys()` | Get all keys |
+| `values()` | Get all values |
+| `items()` | Get key-value pairs |
+| `get(key)` | Retrieve a value safely; returns `None` if missing by default |
+| `update()` | Add or update entries |
+| `pop(key)` | Remove an entry and return its value |
+
+**Iterating through a dictionary:**
+
+```python
+for key, value in employee.items():
+    print(key, value)
+```
+
+**Important:** `employee["unknown"]` raises a `KeyError` if the key does not exist. `employee.get("unknown")` does not.
+
+## 8. Sets
+
+A set stores **unique values** in an unordered collection.
+
+- Does not allow duplicate elements.
+- Does not support indexing or slicing.
+- Mutable: Elements can be added or removed.
+- Elements must be hashable.
+
+```python
+skills = {"Java", "Python", "Java", "SQL"}
+print(skills)  # Contains only unique values
+```
+
+**Important operations:**
+
+| Operation | Purpose |
+|---|---|
+| `add(value)` | Add an element |
+| `remove(value)` | Remove an element; raises an error if missing |
+| `discard(value)` | Remove an element without an error if missing |
+| `union()` | Combine elements from both sets |
+| `intersection()` | Get common elements |
+| `difference()` | Get elements present in the first set but not the second |
+
+```python
+a = {"Java", "Python", "SQL"}
+b = {"Python", "AWS", "Docker"}
+
+a.union(b)
+a.intersection(b)
+a.difference(b)
+```
+
+---
+
+## Quick Comparison
+
+| Data Structure | Ordered | Mutable | Duplicates |
+|---|---|---|---|
+| List | Yes | Yes | Yes |
+| Tuple | Yes | No | Yes |
+| Dictionary | Yes (insertion order) | Yes | Keys: No; Values: Yes |
+| Set | No positional order | Yes | No |
+
+## Key Takeaways
+
+- **Conditional statements:** Make decisions.
+- **Loops:** Repeat operations.
+- **Break / Continue:** Control loop execution.
+- **List:** Ordered collection that can be modified.
+- **List comprehension:** Create lists concisely.
+- **Tuple:** Ordered collection that cannot be modified.
+- **Dictionary:** Store data as key-value pairs.
+- **Set:** Store unique elements and perform set operations.
