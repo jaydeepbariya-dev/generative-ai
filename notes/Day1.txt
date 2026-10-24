@@ -1,0 +1,81 @@
+1. OVERVIEW
+-----------
+Python is a high-level, interpreted, general-purpose programming language. It is 
+highly popular for its simple syntax, readability and massive ecosystem.
+
+
+2. WHY PYTHON FOR GENERATIVE AI (GenAI)?
+---------------------------------------
+Python is the industry standard for AI development because it provides specific 
+libraries that make complex tasks easy.
+
+Core Uses:
+* Data processing and manipulation.
+* Machine Learning (ML) and Deep Learning.
+* Natural Language Processing (NLP).
+* Interfacing with LLMs and AI APIs.
+* Building RAG (Retrieval-Augmented Generation) applications and AI agents.
+
+Key Ecosystem Libraries:
+* NumPy      -> Fast numerical computation and vector/matrix operations.
+* Pandas     -> Powerful data manipulation and analysis tools.
+* scikit-learn -> Core tools for classical Machine Learning.
+
+
+3. ENVIRONMENT SETUP
+--------------------
+1. Python    -> Download and install the latest stable runtime version.
+2. VS Code   -> Install Visual Studio Code as your code editor/IDE.
+3. Extension -> Install the official "Python" extension inside VS Code.
+
+
+4. SYNTAX RULES
+---------------
+* Clean & Simple: Much more concise and readable compared to languages like Java.
+* Indentation: Uses strict whitespace indentation to define code blocks (no curly 
+  braces {} needed).
+* Minimalist: No semicolons (;) required at the end of lines. No mandatory main 
+  method wrapper required to execute code.
+
+
+5. VARIABLES & NAMING CONVENTIONS
+---------------------------------
+* Definition: A name that references an object in memory.
+* Dynamic Typing: Types are inferred automatically at runtime. You do not need 
+  to explicitly declare a variable's data type.
+
+Naming Rules:
+* Must start with a letter or an underscore (_).
+* Cannot start with a number.
+* Case-sensitive ("my_var" and "My_Var" are completely different variables).
+* Cannot use Python reserved keywords (like if, else, for, while, class).
+* Style: Use snake_case for variable names (e.g., user_input, model_response).
+
+
+6. BASIC DATA TYPES & TYPE CASTING
+----------------------------------
+* int   -> Integer / whole numbers (e.g., 10, -5)
+* float -> Floating-point / decimal numbers (e.g., 3.14, 0.0)
+* str   -> String / text data enclosed in quotes (e.g., "Hello AI")
+* bool  -> Boolean / logical states (True or False)
+* None  -> Represents the absence of a value (Null state)
+
+Type Casting: 
+The process of converting a variable from one data type to another.
+Example: Converting a string to an integer: int("25") -> 25
+
+
+7. OPERATORS IN PYTHON
+----------------------
+Operators execute operations on values and variables.
+
+1. Arithmetic Operators : + (Add), - (Sub), * (Mult), / (Div), % (Modulus), 
+                          ** (Exponent), // (Floor Division)
+2. Comparison Operators : == (Equal), != (Not Equal), >, <, >=, <=
+3. Logical Operators    : and, or, not
+4. Assignment Operators : =, +=, -=, *=, /=
+5. Membership Operators : in, not in (Checks if a value exists inside a sequence)
+6. Identity Operators   : is, is not (Checks if two variables reference the 
+                          exact same memory object)
+
+================================================================================
